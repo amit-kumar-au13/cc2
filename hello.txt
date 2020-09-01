@@ -1,2 +1,472 @@
-hi this is amitS
-hi i am from mca
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ ls
+hello.txt
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git branch
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git commit -m"first time hello file modified"
+[master (root-commit) 32f4169] first time hello file modified
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git log
+commit 32f4169164296d36a27a8bb77c1e1fff4a8d6346 (HEAD -> master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:54:19 2020 +0530
+
+    first time hello file modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git commit -m"second time hello file modified"
+[master a82c00f] second time hello file modified
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git log
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (HEAD -> master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+
+commit 32f4169164296d36a27a8bb77c1e1fff4a8d6346
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:54:19 2020 +0530
+
+    first time hello file modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git branch
+* master
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git branch amit
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git branch
+  amit
+* master
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (master)
+$ git checkout amit
+Switched to branch 'amit'
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git branch purple
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git branch
+* amit
+  master
+  purple
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git checkout purple
+Switched to branch 'purple'
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git status
+On branch purple
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git commit -m"first purple modified"
+[purple 12e0981] first purple modified
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git status
+On branch purple
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git commit -m"second purple modified"
+[purple 4da0519] second purple modified
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git log
+commit 4da0519583fc05834b8b87ecaafa7e6a6c907084 (HEAD -> purple)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:08:01 2020 +0530
+
+    second purple modified
+
+commit 12e098100fbf72826179cd1d91bc845897744a18
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:06:57 2020 +0530
+
+    first purple modified
+
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (master, amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+
+commit 32f4169164296d36a27a8bb77c1e1fff4a8d6346
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:54:19 2020 +0530
+
+    first time hello file modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (purple)
+$ git checkout amit
+Switched to branch 'amit'
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git status
+On branch amit
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git commit -m"3rd time blue color modified"
+[amit 45780aa] 3rd time blue color modified
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git log
+commit 45780aa221949c63126fa77a42c70ce8a81cbff2 (HEAD -> amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:12:06 2020 +0530
+
+    3rd time blue color modified
+
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+
+commit 32f4169164296d36a27a8bb77c1e1fff4a8d6346
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:54:19 2020 +0530
+
+    first time hello file modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git status
+On branch amit
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git commit -m"3rd time blue color modified"
+[amit e6773ba] 3rd time blue color modified
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git log
+commit e6773ba30c006d33fe86c3549d7f31252360f3ba (HEAD -> amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:13:35 2020 +0530
+
+    3rd time blue color modified
+
+commit 45780aa221949c63126fa77a42c70ce8a81cbff2
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:12:06 2020 +0530
+
+    3rd time blue color modified
+
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+
+commit 32f4169164296d36a27a8bb77c1e1fff4a8d6346
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:54:19 2020 +0530
+
+    first time hello file modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git reset --hard 45780aa221949c63126fa77a42c70ce8a81cbff2
+HEAD is now at 45780aa 3rd time blue color modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git log
+commit 45780aa221949c63126fa77a42c70ce8a81cbff2 (HEAD -> amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:12:06 2020 +0530
+
+    3rd time blue color modified
+
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+
+commit 32f4169164296d36a27a8bb77c1e1fff4a8d6346
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:54:19 2020 +0530
+
+    first time hello file modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git status
+On branch amit
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git commit -m"4th time blue color modified"
+[amit a8bf4b7] 4th time blue color modified
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git log
+commit a8bf4b77b3267d5738aae654cf1204960d6556cf (HEAD -> amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:16:51 2020 +0530
+
+    4th time blue color modified
+
+commit 45780aa221949c63126fa77a42c70ce8a81cbff2
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:12:06 2020 +0530
+
+    3rd time blue color modified
+
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+
+commit 32f4169164296d36a27a8bb77c1e1fff4a8d6346
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:54:19 2020 +0530
+
+    first time hello file modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git branch green
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git branch
+* amit
+  green
+  master
+  purple
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (amit)
+$ git checkout green
+Switched to branch 'green'
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git merge green
+Already up to date.
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git status
+On branch green
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git commit -m"1sr time green color modified"
+[green 2a4f9e7] 1sr time green color modified
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git log
+commit 2a4f9e72b24cdea6d2e54e3646758d3c9d388140 (HEAD -> green)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:20:50 2020 +0530
+
+    1sr time green color modified
+
+commit a8bf4b77b3267d5738aae654cf1204960d6556cf (amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:16:51 2020 +0530
+
+    4th time blue color modified
+
+commit 45780aa221949c63126fa77a42c70ce8a81cbff2
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:12:06 2020 +0530
+
+    3rd time blue color modified
+
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git status
+On branch green
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git add .
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git commit -m"2nd time green color modified"
+[green 9535631] 2nd time green color modified
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git log
+commit 95356311d7232d5dcce61281ac819604602b1e34 (HEAD -> green)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:22:29 2020 +0530
+
+    2nd time green color modified
+
+commit 2a4f9e72b24cdea6d2e54e3646758d3c9d388140
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:20:50 2020 +0530
+
+    1sr time green color modified
+
+commit a8bf4b77b3267d5738aae654cf1204960d6556cf (amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:16:51 2020 +0530
+
+    4th time blue color modified
+
+commit 45780aa221949c63126fa77a42c70ce8a81cbff2
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:12:06 2020 +0530
+
+    3rd time blue color modified
+
+user@DESKTOP-RT23FHQ MINGW64 ~/Desktop/cc2 (green)
+$ git merge amit
+commit 4db4b2c4f7c01e2b8739e07adea774a2ae44f5d5 (HEAD -> amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:24:57 2020 +0530
+
+    final modified
+
+commit a8bf4b77b3267d5738aae654cf1204960d6556cf
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:16:51 2020 +0530
+
+    4th time blue color modified
+
+commit 45780aa221949c63126fa77a42c70ce8a81cbff2
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:12:06 2020 +0530
+
+    3rd time blue color modified
+
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+:...skipping...
+commit 4db4b2c4f7c01e2b8739e07adea774a2ae44f5d5 (HEAD -> amit)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:24:57 2020 +0530
+
+    final modified
+
+commit a8bf4b77b3267d5738aae654cf1204960d6556cf
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:16:51 2020 +0530
+
+    4th time blue color modified
+
+commit 45780aa221949c63126fa77a42c70ce8a81cbff2
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 23:12:06 2020 +0530
+
+    3rd time blue color modified
+
+commit a82c00f6907437106dbb6b0b51b444bd899657ba (master)
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:56:09 2020 +0530
+
+    second time hello file modified
+
+commit 32f4169164296d36a27a8bb77c1e1fff4a8d6346
+Author: Amit kumar <duter.duter@gmail.com>
+Date:   Tue Sep 1 22:54:19 2020 +0530
+
+    first time hello file modified
+
